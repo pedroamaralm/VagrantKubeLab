@@ -16,8 +16,8 @@ echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.
 apt update && apt install -y kubeadm=1.20.0-00 kubelet=1.20.0-00 kubectl=1.20.0-00 && \
 ipDoServidor=`hostname -I | awk '{print $2}'` && \
 kubeadm init --apiserver-advertise-address=$(echo $ipDoServidor) --pod-network-cidr=192.168.0.0/16  --ignore-preflight-errors=all && \
-mkdir -p $HOME/.kube && \
-cp -i /etc/kubernetes/admin.conf $HOME/.kube/config && \
-chown $(id -u):$(id -g) $HOME/.kube/config&& \
+mkdir -p /home/vagrant/.kube && \
+cp -i /etc/kubernetes/admin.conf /home/vagrant/.kube/config && \
+chown vagrant:vagrant /home/vagrant/.kube/config && \
 kubeadm token create --print-join-command > /vagrant/join_cluster && \
 echo "Provisionamento do master feito com sucesso."
