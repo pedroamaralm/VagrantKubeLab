@@ -17,4 +17,4 @@ apt update && apt install -y kubeadm=1.20.0-00 kubelet=1.20.0-00 kubectl=1.20.0-
 chmod u+x /vagrant/join_cluster && \
 cd /vagrant/ && \
 bash join_cluster && \
-echo "Provisionamento do worker feito com sucesso." && \
+echo "Provisionamento do worker feito com sucesso."
