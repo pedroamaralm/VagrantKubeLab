@@ -1,0 +1,1 @@
+kubeadm join 192.168.0.100:6443 --token g2cnba.w5bxckc2tsiunoul     --discovery-token-ca-cert-hash sha256:d02eb8738271fdeb773c2ecfabb9140dca7fbdb05565810fb181b005535d8497 
